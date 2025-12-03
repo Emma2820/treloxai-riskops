@@ -1,4 +1,9 @@
 fastapi
-uvicorn
+uvicorn[standard]
+dash
+plotly
+requests
 pydantic
+reportlab
+
 
