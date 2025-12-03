@@ -1,7 +1,0 @@
-fastapi
-uvicorn[standard]
-dash
-plotly
-requests
-pydantic
-reportlab
