@@ -16,7 +16,7 @@ PORT = os.getenv("PORT", "8000")
 API_BASE = f"http://127.0.0.1:{PORT}"
 
 # URL complète de l’endpoint
-RISK_SERVICE_URL = f"{API_BASE}/risk/analyze"
+RISK_SERVICE_URL = "https://treloxai-riskops.onrender.com/risk/analyze"
 
 
 
@@ -1263,5 +1263,8 @@ def run_risk_analysis(
 #  RUN
 # ============================================================
 
-dash_app = app
+if __name__ == "__main__":
+    import os
+    port = int(os.environ.get("PORT", 8050))
+    app.run(debug=False, host="0.0.0.0", port=port)
 
