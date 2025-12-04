@@ -107,9 +107,8 @@ def level_color(level: str) -> str:
 app = Dash(
     __name__,
     suppress_callback_exceptions=True,
-    requests_pathname_prefix="/dashboard/",
-    
 )
+
 
 app.title = "TRELOXAI - RiskOps Demo"
 
@@ -1265,6 +1264,7 @@ def run_risk_analysis(
 
 if __name__ == "__main__":
     import os
-    port = int(os.environ.get("PORT", 8050))
+    port = int(os.environ.get("PORT", 10000))
     app.run(debug=False, host="0.0.0.0", port=port)
+
 
